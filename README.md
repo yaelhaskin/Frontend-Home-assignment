@@ -1,6 +1,11 @@
 # Frontend Home Assignment
 Front-end Developer Home Assignment - July 2024
 
+## Objective
+
+In this assignment, you will build a nonprofit portfolio builder application for Bono using [Next.js](https://nextjs.org/docs). The application will consist of three screens and will interact with an existing backend API to fetch and display information about various causes. Your focus will be on API integration, SEO, server-side rendering, and maintaining high code quality.
+
+
 # Bono Nonprofit Portfolio Builder
 
 This project is a front-end developer assignment for Bono, built using Next.js. It consists of a flow of three screens using an existing backend API to build a nonprofit portfolio. The project focuses on working with APIs, SEO, server-side rendering, and code quality.
@@ -8,9 +13,9 @@ This project is a front-end developer assignment for Bono, built using Next.js. 
 ## Features
 
 - **API Interaction**: Interact with the Bono API to fetch and display causes.
-- **SEO**: Include proper meta tags and Open Graph tags for SEO.
+- **SEO**: Include proper meta tags and [Open Graph tags](https://ogp.me/) for [SEO](https://moz.com/learn/seo/what-is-seo).
 - **Server-Side Rendering**: Utilize Next.js's server-side rendering capabilities.
-- **Responsive Design**: Ensure the project is responsive and works well on various screen sizes.
+- **Responsive Design**: Ensure the project is [responsive](https://www.w3schools.com/html/html_responsive.asp) and works well both on desktop and mobile.
 
 ## API
 
@@ -55,3 +60,11 @@ Replicate the design as shown in the image.
   "firstName": "string",
   "causes": [1, 2, 3]
 }
+
+## Submission
+
+To submit your code, follow these steps:
+
+1. Create a GitHub repository for your project.
+2. Initialize the repository with your project code.
+3. Ensure your code can be started with Docker or npm. Include a `Dockerfile` or clear instructions in the `README.md` on how to run the project.
