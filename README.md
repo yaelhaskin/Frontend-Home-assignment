@@ -1,7 +1,7 @@
 # Frontend Home Assignment
 Front-end Developer Home Assignment - July 2024
 
-## Objective
+# Objective
 
 In this assignment, you will build a nonprofit portfolio builder application for Bono using [Next.js](https://nextjs.org/docs). The application will consist of three screens and will interact with an existing backend API to fetch and display information about various causes. Your focus will be on API integration, SEO, server-side rendering, and maintaining high code quality.
 
