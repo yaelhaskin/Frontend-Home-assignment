@@ -1,21 +1,9 @@
-# Frontend-Home-assignment
-Front-end developer home assignment - July 2024
+# Frontend Home Assignment
+Front-end developer home assignment - July 2024.
 
 # Bono Nonprofit Portfolio Builder
 
 This project is a front-end developer assignment for Bono, built using Next.js. It consists of a flow of three screens using an existing backend API to build a nonprofit portfolio. The project focuses on working with APIs, SEO, server-side rendering, and code quality.
-
-## Screens
-
-### 1. Welcome Screen
-![Welcome Screen](/images/welcome.png)
-
-### 2. Cause Selection Screen
-![Cause Selection Screen](/images/cause-selection.png)
-
-### 3. Summary Screen
-*Add a brief description and an image of the third screen here.*
-![Cause Selection Screen](/images/cause-selection.png)
 
 ## Features
 
@@ -24,43 +12,53 @@ This project is a front-end developer assignment for Bono, built using Next.js. 
 - **Server-Side Rendering**: The project uses Next.js's server-side rendering capabilities.
 - **Responsive Design**: The project is responsive and works well on various screen sizes.
 
-## Installation
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/bono-nextjs-project.git
-    ```
-
-2. Navigate to the project directory:
-    ```sh
-    cd bono-nextjs-project
-    ```
-
-3. Install dependencies:
-  start the project for scratch using TS, you can use MUI or Tailwind 
-
 ## API
 
 This project uses the Bono API to fetch causes.
+- **Endpoint**: `https://dev.api.bono.so/v1`
+- **Documentation**: [API Documentation](https://dev.api.bono.so/v1/swagger#/)
 
-- **Endpoint**: `https://dev.api.bono.so/v1/charity/causes`
-- **Documentation**: [API Documentation](https://dev.api.bono.so/v1/swagger#/causes/CauseController_get)
+## Screens
+The project screens are already created in our production system:
+https://app.bono.so
+The flow is different here!
 
-## Code Quality
+### 1. Welcome Screen
+![Welcome Screen](/screens/01_welcome/Frame.png)
 
-- The project follows standard coding conventions.
-- ESLint is used for linting.
-- Prettier is used for code formatting.
+The first screen that the user sees, the design is in the screen folder.
+Terms and Conditions and Privacy Policy should link to the marketing site pages.
+When clicking 'Let's Start', the user goes to the Causes screen.
 
-## Project Structure
+### 2. Cause Selection Screen
+![Cause Screen](/screens/02_causes/empty.png)
 
-- Used your preferred way
+The screen's goal is to let the user select 3 causes and see the details about them.
+The user can't select less or more than 3.
+To get the causes, use the API endpoint `/v1/charity/causes`. No need for authentication here.
+When the user clicks on a cause, details and an image will be shown.
+The information is provided by the API.
+The mobile design has a scroller option that shows only 2 rows.
+There will always be 9 causes from the API.
 
-## Deployment
+After the user completes the selection, go to the signup screen.
 
-To deploy this project, you can use services like Vercel or Netlify.
+### 3. Signup Screen
+![Signup Screen](/screens/03_signup/iPhone%2013%20mini%20-%20172.png)
 
-## License
+Create the same design as the image.
+No need to create the Google login functionality, only the design.
 
-This project is licensed under the MIT License.
-
+When the user submits the form, send it to `/v1/auth/register/anonymous`.
+You need to send the selected causes' IDs.
+POST payload: 
+```json
+{
+  "email": "string@test.com",
+  "firstName": "string",
+  "causes": [
+    1,
+    2,
+    3
+  ]
+}
