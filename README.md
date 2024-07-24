@@ -60,6 +60,7 @@ Replicate the design as shown in the image.
   "firstName": "string",
   "causes": [1, 2, 3]
 }
+```
 
 ## Submission
 
