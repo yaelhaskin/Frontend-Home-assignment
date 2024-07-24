@@ -1,5 +1,5 @@
 # Frontend Home Assignment
-Front-end developer home assignment - July 2024.
+Front-end Developer Home Assignment - July 2024
 
 # Bono Nonprofit Portfolio Builder
 
@@ -7,10 +7,10 @@ This project is a front-end developer assignment for Bono, built using Next.js. 
 
 ## Features
 
-- **API Interaction**: The project interacts with the Bono API to fetch and display causes.
-- **SEO**: The project includes proper meta tags and Open Graph tags.
-- **Server-Side Rendering**: The project uses Next.js's server-side rendering capabilities.
-- **Responsive Design**: The project is responsive and works well on various screen sizes.
+- **API Interaction**: Interact with the Bono API to fetch and display causes.
+- **SEO**: Include proper meta tags and Open Graph tags for SEO.
+- **Server-Side Rendering**: Utilize Next.js's server-side rendering capabilities.
+- **Responsive Design**: Ensure the project is responsive and works well on various screen sizes.
 
 ## API
 
@@ -19,46 +19,39 @@ This project uses the Bono API to fetch causes.
 - **Documentation**: [API Documentation](https://dev.api.bono.so/v1/swagger#/)
 
 ## Screens
-The project screens are already created in our production system:
-https://app.bono.so
-The flow is different here!
+The project screens are designed and available in our production system: [Bono](https://app.bono.so).
+Please note that the flow in this assignment is different from the production system.
 
 ### 1. Welcome Screen
 ![Welcome Screen](/screens/01_welcome/Frame.png)
 
-The first screen that the user sees, the design is in the screen folder.
-Terms and Conditions and Privacy Policy should link to the marketing site pages.
-When clicking 'Let's Start', the user goes to the Causes screen.
+This is the first screen that the user sees. The design is provided in the `screens` folder.
+- Link the Terms and Conditions and Privacy Policy to the respective marketing site pages.
+- On clicking 'Let's Start', navigate the user to the Cause Selection screen.
 
 ### 2. Cause Selection Screen
 ![Cause Screen](/screens/02_causes/empty.png)
 
-The screen's goal is to let the user select 3 causes and see the details about them.
-The user can't select less or more than 3.
-To get the causes, use the API endpoint `/v1/charity/causes`. No need for authentication here.
-When the user clicks on a cause, details and an image will be shown.
-The information is provided by the API.
-The mobile design has a scroller option that shows only 2 rows.
-There will always be 9 causes from the API.
+The purpose of this screen is to let the user select 3 causes and view details about them.
+- Users cannot select fewer or more than 3 causes.
+- Use the API endpoint `/v1/charity/causes` to fetch the causes. No authentication is required.
+- Display cause details and an image when the user clicks on a cause.
+- Ensure the mobile design includes a scroller showing only 2 rows.
+- The API will always return 9 causes.
 
-After the user completes the selection, go to the signup screen.
+After the user completes the selection, navigate to the Signup screen.
 
 ### 3. Signup Screen
 ![Signup Screen](/screens/03_signup/iPhone%2013%20mini%20-%20172.png)
 
-Create the same design as the image.
-No need to create the Google login functionality, only the design.
-
-When the user submits the form, send it to `/v1/auth/register/anonymous`.
-You need to send the selected causes' IDs.
-POST payload: 
+Replicate the design as shown in the image.
+- No need to implement Google login functionality; only create the design.
+- On form submission, send the data to `/v1/auth/register/anonymous`.
+- Include the selected causes' IDs in the payload.
+- POST payload example:
 ```json
 {
   "email": "string@test.com",
   "firstName": "string",
-  "causes": [
-    1,
-    2,
-    3
-  ]
+  "causes": [1, 2, 3]
 }
