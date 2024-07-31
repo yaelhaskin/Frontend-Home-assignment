@@ -16,6 +16,8 @@ This project is a front-end developer assignment for Bono, built using Next.js. 
 - **SEO**: Include proper meta tags and [Open Graph tags](https://ogp.me/) for [SEO](https://moz.com/learn/seo/what-is-seo).
 - **Server-Side Rendering**: Utilize Next.js's server-side rendering capabilities.
 - **Responsive Design**: Ensure the project is [responsive](https://www.w3schools.com/html/html_responsive.asp) and works well both on desktop and mobile.
+- **Clean Code**: TypeScript will be prefered
+- **Production Ready**: The project should be ready to go live to users.
 
 ## API
 
