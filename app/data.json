@@ -1,0 +1,25 @@
+{
+    "text": [
+        {
+            "path": "/",
+            "title": "Let's build your nonprofit portfolio",
+            "subtitle": "Join the movement and help fix the October 7th aftermath",
+            "listContent": ["Choose causes", "Save your portfolio", "Subscribe to make an impact", "Recive weekly impact updates"]
+        },
+        {
+            "path": "/cause-selection",
+            "title": "Let's build your nonprofit portfolio",
+            "subtitle": "Pick the 3 causes that you mostly care about:"
+        },
+        {
+            "path": "/sign-up",
+            "title": "Let's save your portfolio",
+            "subtitle": "You'll recieve weekly impact reports from Bono. Your email is not shared with anyone!"
+        },
+        {
+            "path": "/login",
+            "title": "Log in to your profile",
+            "subtitle": "Continue with your Gmail account or enter your email address to continue to your Giving Profile"
+        }
+    ]
+}

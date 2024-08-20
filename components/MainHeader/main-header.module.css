@@ -1,0 +1,25 @@
+.MainHeader {
+    width: 100%;
+    height: 6%;
+    padding: 5px 20px;
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 80%;
+}
+
+.loginBtn {
+    width: 5%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: solid 1px rgb(247, 247, 247);
+}

@@ -1,0 +1,51 @@
+.WelcomePage {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .title {
+    font-weight: 900;
+}
+
+.subtitle {
+    margin: 3% 0;
+    font-weight: 600;
+} */
+
+.list {
+    margin: 10% 0;
+    clear: both;
+    list-style: none;
+}
+
+.list li {
+    display: block;
+    position: relative;
+    counter-increment: inst;
+    margin: 2% 0;
+    font-weight: 600;
+}
+.list li::before {
+    content: counter(inst);
+    width: 1.35vw;
+    height: 1.35vw;
+    margin-right: 3%;
+    padding: 0.5% 1.5%;
+    
+    background: rgb(91, 134, 243);
+    color: #fff;
+    
+    border-radius: 100%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.fineprint {
+    align-self: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.link {
+    text-decoration: underline;
+}
