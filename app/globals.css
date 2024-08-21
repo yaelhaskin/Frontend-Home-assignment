@@ -35,7 +35,10 @@ input {
 }
 
 .page {
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -69,4 +72,16 @@ input {
   height: auto;
   margin: 0 10%;
   padding: 2px;
+}
+
+@media (max-width: 500px) {
+  .page {
+    width: 100%;
+    padding: 30% 8% 10% 8%;
+    overflow: hidden;
+  }
+
+  .button {
+    width: 80%;
+  }
 }

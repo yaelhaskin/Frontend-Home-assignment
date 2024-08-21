@@ -1,26 +1,21 @@
-'use client';
-
 import React from 'react';
 
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Divider } from '@mui/material';
 
 import googleLogo from '@/assets/googleLogo.png'
-import arrow from '@/assets/whiteArrow.svg';
 import classes from "./connect-user.module.css";
 
-import PageHeader from '../PageHeader/PageHeader';
+import UserFormBtn from './UserFormBtn';
+import { handleUserForm } from '@/lib/actions';
 
-const ConnectUser = () => {
-    const path = usePathname();
-    const isSignin = path === '/sign-up';
-
+const ConnectUser = ({ page, selectedCausesIds }) => {
+    const isSignup = page === 'sign-up';    
+    
     return (
         <div className={classes.ConnectUser}>
-            <PageHeader/>
-            <div style={{ width: '50%' }}>
+            <div className={classes.formContainer}>
                 <Link href='https://www.google.com/' target="_blank" className={classes.googleBtn}>
                     <Image src={googleLogo} alt='arrow Icon' className='whiteArrowImg'/>
                     Continue with Google
@@ -28,15 +23,17 @@ const ConnectUser = () => {
 
                 <Divider style={{ margin: '10% 0' }}>or</Divider>
 
-                {isSignin && <input placeholder='Your name'></input>}
-                <input placeholder='Your email'></input>
-                <p className={classes.fineprint}>You will receive a temporary password by email</p>
+                <form action={handleUserForm}>
+                    {isSignup && <input type="text" id="name" name="name" placeholder='Your name' required />}
+                    <input type="text" id="email" name="email" placeholder='Your email' required />
+                    {selectedCausesIds.map((id, index) => (
+                        <input key={index} type="hidden" name="causes[]" value={id} />
+                    ))}
+                    <p className={classes.fineprint}>You will receive a temporary password by email</p>
+                    
+                    <UserFormBtn isSignup={isSignup}/>
+                </form>
             </div>
-
-            <Link href="/" className={`button ${classes.continueBtn}`}>
-                {isSignin ? 'Save and Continue' : 'Login'}
-                <Image src={arrow} alt="arrow Icon" className="whiteArrowImg" />
-            </Link>
         </div>
     );
 };

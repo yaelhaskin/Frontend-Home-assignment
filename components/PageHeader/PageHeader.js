@@ -3,12 +3,13 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 
-import { text } from "@/app/data.json"
+import data from "@/app/data.json"
 import classes from "./page-header.module.css"
 
 const PageHeader = () => {
     const path = usePathname();    
-    let curPage = text.filter((pageText) => pageText.path === path)[0];
+    const text = data.data;
+    const curPage = text.find(pageText => pageText.path === path) || {};
     
     return (
         <header>

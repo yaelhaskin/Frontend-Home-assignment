@@ -23,3 +23,9 @@
     border-radius: 20px;
     border: solid 1px rgb(247, 247, 247);
 }
+
+@media (max-width: 500px) {
+    .MainHeader {
+      display: none;
+    }
+}

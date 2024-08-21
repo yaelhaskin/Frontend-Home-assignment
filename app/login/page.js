@@ -1,10 +1,15 @@
-import ConnectUser from '@/components/ConnectUser/ConnectUser';
 import React from 'react';
+
+import ConnectUser from '@/components/ConnectUser/ConnectUser';
+import PageHeader from '@/components/PageHeader/PageHeader';
+import BackBtn from '@/components/BackBtn/BackBtn';
 
 const LogInPage = () => {
     return (
         <section className='page'>
-            <ConnectUser />
+            <PageHeader/>
+            <BackBtn />
+            <ConnectUser page='login' selectedCausesIds={[]}/>
         </section>
     );
 };

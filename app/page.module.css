@@ -6,3 +6,17 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+.LandingPageBtn {
+  width: 30%;
+  margin-top: 10%;
+}
+
+@media (max-width: 500px) {
+  .LandingPageBtn {
+    width: 90%;
+  }
+  .WelcomePageBtn {
+    width: 90%;
+  }
+}

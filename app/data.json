@@ -1,7 +1,7 @@
 {
-    "text": [
+    "data": [
         {
-            "path": "/",
+            "path": "/welcome",
             "title": "Let's build your nonprofit portfolio",
             "subtitle": "Join the movement and help fix the October 7th aftermath",
             "listContent": ["Choose causes", "Save your portfolio", "Subscribe to make an impact", "Recive weekly impact updates"]

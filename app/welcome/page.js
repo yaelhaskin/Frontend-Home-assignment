@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { text } from "@/app/data.json"
+import data from "@/app/data.json"
 import classes from "./welcome.module.css";
 import arrow from '@/assets/whiteArrow.svg';
 
@@ -8,18 +8,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHeader from '@/components/PageHeader/PageHeader';
 
-const listContent = text.filter((pageText) => pageText.path === '/')[0]['listContent'];
+const text = data.data;
+const listContent = text.find(pageText => pageText.path === '/welcome')['listContent'] || [];
+// const listContent = text.filter((pageText) => pageText.path === '/welcome')[0]['listContent'];
 
 const WelcomePage = () => {    
     return (
-        <section className={classes.WelcomePage}>
+        <section className={`page ${classes.WelcomePage}`}>
             <PageHeader/>
             <ol className={classes.list}>
                 {listContent.map((item) => (
                     <li key={item}>{ item }</li>
                 ))}
             </ol>
-            <Link href="/cause-selection" className='button' style={{ width: '100%' }}> 
+            <Link href="/cause-selection" className={`button ${classes.WelcomePageBtn}`}> 
                 Let's Start 
                 <Image src={arrow} alt='arrow Icon' className='whiteArrowImg'/>
             </Link>

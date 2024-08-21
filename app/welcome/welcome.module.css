@@ -1,18 +1,14 @@
 .WelcomePage {
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
 }
 
-/* .title {
-    font-weight: 900;
+.WelcomePageBtn {
+    width: 30%;
 }
-
-.subtitle {
-    margin: 3% 0;
-    font-weight: 600;
-} */
 
 .list {
+    width: 60%;
     margin: 10% 0;
     clear: both;
     list-style: none;
@@ -48,4 +44,19 @@
 
 .link {
     text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .WelcomePage {
+        width: 100%;
+    }
+    .WelcomePageBtn {
+        width: 60%;
+    }    
+    .list {
+        width: 100%;
+    }
+    .fineprint {
+        text-align: center;
+    }
 }
